@@ -1,0 +1,64 @@
+//Atlanta Population
+
+//1
+db.zipcodes.find({"city":"ATLANTA"},{"state":"GA"})
+
+//2
+db.zipcodes.aggregate({$match:{$and :[{city :"ATLANTA"},{state:"GA"}]}})
+
+//3
+db.zipcodes.aggregate({$match:{city:"ATLANTA"}},{$group:{_id:"$city",total:{$sum:1}}})
+
+//4
+db.zipcodes.aggregate({$match:{city:"ATLANTA"}},{$group:{_id:"$city",population:{$sum:"$pop"}}})
+
+//Population by state
+
+//1
+db.zipcodes.aggregate({$group:{_id:{state:"$state"},population:{$sum:"$pop"}}})
+
+//2
+db.zipcodes.aggregate([{$group:{_id:{state:"$state"},population:{$sum:"$pop"}}},{$sort:{population:-1}}])
+
+//3
+db.zipcodes.aggregate([{$group:{_id:{state:"$state"},population:{$sum:"$pop"}}},{$sort:{population:-1}},{$limit:3}])
+//top 3 states by population
+//{ "_id" : { "state" : "CA" }, "population" : 29754890 }
+//{ "_id" : { "state" : "NY" }, "population" : 17990402 }
+//{ "_id" : { "state" : "TX" }, "population" : 16984601 }
+
+//Population by city
+
+//1
+//Since some city names exist in more than one state, we cannot use the city field alone
+db.zipcodes.aggregate({$group:{_id:{city:"$city",state:"$state"},population:{$sum:"$pop"}}})
+
+//2
+db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},population:{$sum:"$pop"}}},{$sort:{population:-1}}])
+
+//3
+db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},population:{$sum:"$pop"}}},{$sort:{population:-1}},{$limit:3}])
+//top 3 cities by population
+//{ "_id" : { "city" : "CHICAGO", "state" : "IL" }, "population" : 2452177 }
+//{ "_id" : { "city" : "BROOKLYN", "state" : "NY" }, "population" : 2300504 }
+//{ "_id" : { "city" : "LOS ANGELES", "state" : "CA" }, "population" : 2102295 }
+
+//4
+ db.zipcodes.aggregate([{$match:{state:"TX"}},{$group:{_id:{city:"$city",state:"$state"},population:{$sum:"$pop"}}},{$sort:{population:-1}},{$limit:3}])
+//top 3 cities in Texas
+//{ "_id" : { "city" : "HOUSTON", "state" : "TX" }, "population" : 2095918 }
+//{ "_id" : { "city" : "DALLAS", "state" : "TX" }, "population" : 940191 }
+//{ "_id" : { "city" : "SAN ANTONIO", "state" : "TX" }, "population" : 811792 }
+
+//Bonus
+
+//1
+db.zipcodes.aggregate([{$group:{_id:{state:"$state",city:"$city"},population:{$sum:"$pop"}}},{$group:{_id:"$_id.state",averagecitypop:{$avg:"$population"}}}])
+
+//2
+db.zipcodes.aggregate([{$group:{_id:{state:"$state",city:"$city"},population:{$sum:"$pop"}}},{$group:{_id:"$_id.state",averagecitypop:{$avg:"$population"}}},{$sort:{averagecitypop:-1}},{$limit:3}])
+//{ "_id" : "DC", "averagecitypop" : 303450 }
+//{ "_id" : "CA", "averagecitypop" : 27756.42723880597 }
+//{ "_id" : "FL", "averagecitypop" : 27400.958963282937 }
+
+
