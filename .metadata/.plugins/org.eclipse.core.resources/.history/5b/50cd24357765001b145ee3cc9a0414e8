@@ -1,0 +1,54 @@
+package com.madhu.springAssignment7;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class SpelDemo
+
+{
+	public static void main(String args[])
+	{
+	ExpressionParser expressionParser = new SpelExpressionParser();
+
+	// 1. Literal expression
+	Expression expression = expressionParser.parseExpression("'Hello SPEL'");
+	String strVal = expression.getValue(String.class);
+	System.out.println("1. Literal expression value:\n" + strVal);
+
+	// 2. Method invocation
+	expression = expressionParser.parseExpression("'Hello SPEL'.concat('!')");
+	strVal = expression.getValue(String.class);
+	System.out.println("2. Method invocation value:\n" + strVal);
+
+	// 3. Mathematical operator
+	expression = expressionParser.parseExpression("5 * 5");
+	Integer intVal = expression.getValue(Integer.class);
+	System.out.println("3. Mathematical operator value:\n" + intVal);
+
+	// 4. Relational operator
+	expression = expressionParser.parseExpression("5 < 7");
+	boolean boolVal = expression.getValue(Boolean.class);
+	System.out.println("4. Mathematical operator value:\n" + boolVal);
+
+	// 5. Logical operator
+	expression = expressionParser.parseExpression("800 > 200 && 200 < 400");
+	boolVal = expression.getValue(Boolean.class);
+	System.out.println("5. Logical operator value:\n" + boolVal);
+
+	// 6. Ternary operator
+	expression = expressionParser.parseExpression("'1' != null ? 'some value' : 'default'");
+	strVal = expression.getValue(String.class);
+	System.out.println("6. Ternary operator value:\n" + strVal);
+
+	// 7. Elvis operator
+	expression = expressionParser.parseExpression("'1' ?: 'default'");
+	strVal = expression.getValue(String.class);
+	System.out.println("7. Elvis operator value:\n" + strVal);
+
+	// 8. Regex/matches operator
+	expression = expressionParser.parseExpression("'UPPERCASE STRING' matches '[A-Z\\s]+'");
+	boolVal = expression.getValue(Boolean.class);
+	System.out.println("8. Regex/matches operator value:\n" + boolVal);
+}
+}

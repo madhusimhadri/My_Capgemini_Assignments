@@ -1,0 +1,9 @@
+package com.madhu.springAssignment;
+
+public class Customer 
+{
+	private int customerId;
+	private String customerName;
+	private int customerContact;
+	private String customerAddress;
+}
