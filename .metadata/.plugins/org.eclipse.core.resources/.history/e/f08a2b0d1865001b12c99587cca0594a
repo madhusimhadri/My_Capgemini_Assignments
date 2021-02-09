@@ -1,0 +1,14 @@
+package com.madhu.springAssignment3;
+
+import org.springframework.stereotype.Controller;
+
+@Controller("studentController")
+public class StudentController
+{
+ Teacher teacher;
+ 
+ public StudentA createNewStudent()
+ {
+	 return teacher.createNewEmployee();
+ }
+}

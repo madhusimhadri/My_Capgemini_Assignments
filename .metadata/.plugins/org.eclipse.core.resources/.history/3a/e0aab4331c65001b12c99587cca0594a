@@ -1,0 +1,16 @@
+package com.madhu.springAssignment3;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("student")
+public class StudentImpl implements Student
+{
+	public StudentA createNewStudent()
+	{
+		StudentA a=new StudentA();
+		a.setId(1);
+		a.setFirstname("Madhu");
+		a.setLastname("Simhadri");
+		return a;
+	}
+}
