@@ -1,0 +1,20 @@
+package com.madhu.springAssignment3;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    
+      @SuppressWarnings("resource")
+      ApplicationContext context= new ClassPathXmlApplicationContext("spring3.xml");
+      StudentController controller =( StudentController) context.getBean("student") ;
+      System.out.println(controller.createNewStudent());
+    }
+}
