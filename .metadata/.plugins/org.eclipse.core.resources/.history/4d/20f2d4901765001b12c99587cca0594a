@@ -1,0 +1,13 @@
+package com.madhu.springAssignment3;
+
+import org.springframework.stereotype.Service;
+
+@Service("teacher")
+public class TeacherImplementation implements Teacher
+{
+	StudentA a;
+	public StudentA createNewStudent()
+	{
+		return a.createNewStudent();
+	}
+}

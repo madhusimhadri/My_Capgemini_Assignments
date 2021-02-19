@@ -1,0 +1,11 @@
+package com.madhu.springAssignment3;
+
+public class StudentController
+{
+ Teacher teacher;
+ 
+ public StudentA createNewStudent()
+ {
+	 return teacher.createNewEmployee();
+ }
+}

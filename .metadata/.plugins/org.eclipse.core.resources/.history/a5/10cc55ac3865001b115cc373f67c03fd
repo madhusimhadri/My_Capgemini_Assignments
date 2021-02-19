@@ -1,0 +1,65 @@
+package com.madhu.springAssignment8;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+/*
+@Component
+public class Lifecycle2 
+{
+	public String message;
+
+	public void setMessage(String message)
+	{
+		this.message=message;
+	}
+
+	public void getMessage()
+	{
+		System.out.println("My Message:" +message);
+	}
+
+	@PostConstruct
+	public void init()
+	{
+		System.out.println("Init method called");
+	}
+	@PreDestroy
+	public void destroy()
+	{
+		System.out.println("Destroy method called");
+	}*/
+	
+@Component
+public class Lifecycle2 {
+
+   private Map<String, String> map=null;
+   
+   public Lifecycle2 () {
+      map=new HashMap<String, String>();
+   }
+
+   public void send(String mailTo){
+      //Code for sending mail
+      System.out.println("Inside send method - "+mailTo);
+   }
+   
+   @PostConstruct
+   public void init() {
+      map.put("host", "mail.example.com");
+      map.put("port", "25");
+      map.put("from", "example@boraji.com");
+      System.out.println("Inside init method - "+map);
+   }
+
+   @PreDestroy
+   public void destroy() {
+      map.clear();
+      System.out.println("Inside destroy method - "+map);
+   }
+}
+
+
+}
