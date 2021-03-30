@@ -1,0 +1,10 @@
+package com.madhu.springAssignment3;
+
+public class TeacherImplementation implements Teacher
+{
+	StudentA a;
+	public StudentA createNewStudent()
+	{
+		return a.createNewStudent();
+	}
+}

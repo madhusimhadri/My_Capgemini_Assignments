@@ -1,0 +1,22 @@
+package com.madhu.Spring;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Car implements Vehicle
+{
+	
+	private Tyre tyre;
+	
+	
+	public Car(Tyre tyre) {
+		super();
+		this.tyre = tyre;
+	}
+
+
+	public void drive()
+	{
+		System.out.println("Car "+tyre);
+	}
+}
