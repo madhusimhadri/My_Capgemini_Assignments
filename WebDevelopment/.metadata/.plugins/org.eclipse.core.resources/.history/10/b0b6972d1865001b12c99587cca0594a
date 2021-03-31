@@ -1,0 +1,8 @@
+package com.madhu.springAssignment3;
+
+public class StudentA 
+{
+private int id;
+private String firstname;
+private String lastname;
+}

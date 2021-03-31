@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+   
+   
+  <!--  
+   <bean id="address1" class="com.madhu.springAssignment.Address">
+   <property name="street" value="Alluri Seeta RamaRaju Nagar"></property>
+   <property name="city" value="Bhimavaram"></property>
+   <property name="state" value="Andhra Pradesh"></property>
+   <property name="zip" value="534210"></property>
+   <property name="country" value="India"></property>
+   </bean>
+   
+   <bean id="details" class="com.madhu.springAssignment.Customer">
+   <property name="customerId" value="1"></property>
+   <property name="customerName" value="Madhu Simhadri"></property>
+   <property name="customerContact" value="999999999"></property>
+   <property name="customerAddress" ref="address1"></property>
+   </bean>
+   -->
+   
+   <bean id="details" class="com.madhu.springAssignment.Customer">
+   <constructor-arg value="1" type="int"></constructor-arg>
+   <constructor-arg value="999999999" type="long"></constructor-arg>
+   <constructor-arg value="Madhu Simhadri" type="String"></constructor-arg>
+   </bean>
+ 
+</beans>

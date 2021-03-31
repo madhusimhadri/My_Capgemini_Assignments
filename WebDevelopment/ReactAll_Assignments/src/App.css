@@ -1,0 +1,17 @@
+
+body{
+  background-color: slategray;
+}
+.date
+{
+  font-size: 40px;
+  font-weight: bolder;
+  color: blue
+}
+
+.time
+{
+  font-size: 40px;
+  font-weight: bolder;
+  color: red;
+}

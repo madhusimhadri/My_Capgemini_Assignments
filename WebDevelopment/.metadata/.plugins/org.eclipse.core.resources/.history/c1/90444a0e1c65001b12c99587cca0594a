@@ -1,0 +1,18 @@
+package com.madhu.springAssignment3;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
+
+@ComponentScan
+@Controller("studentController")
+public class StudentController
+{
+	@Autowired
+ Teacher teacher;
+ 
+ public StudentA createNewStudent()
+ {
+	 return teacher.createNewStudent();
+ }
+}

@@ -1,0 +1,5 @@
+package com.madhu.springAssignment5;
+
+public interface Party {
+
+}

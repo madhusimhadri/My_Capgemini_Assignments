@@ -1,0 +1,58 @@
+<h3 class="container-fluid">All Ads</h3>
+<div  class="container-fluid">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of arrAds; let i =index">
+            <td>{{i}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                <button style="background:red;" class="btn btn-primary" (click)="deleteItem(item)">Delete</button>
+           
+                <button class="btn btn-primary" [routerLink]="['edit',item.name]">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<h3 class="container-fluid">All Ads using async</h3>
+<div  class="container-fluid">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of serviceItems | async; let i =index">
+            <td>{{i}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                <button style="background:red;" class="btn btn-primary" (click)="deleteItem(item)">Delete</button>
+           
+                <button class="btn btn-primary" (click)="updateItem(item)">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
