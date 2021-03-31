@@ -1,8 +1,0 @@
-package com.madhu.springAssignment5;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class Person implements Party{
-
-}

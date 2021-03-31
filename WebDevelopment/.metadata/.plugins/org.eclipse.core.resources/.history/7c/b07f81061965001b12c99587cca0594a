@@ -1,8 +1,0 @@
-package com.madhu.springAssignment3;
-
-public class StudentA 
-{
-private Integer id;
-private String firstname;
-private String lastname;
-}

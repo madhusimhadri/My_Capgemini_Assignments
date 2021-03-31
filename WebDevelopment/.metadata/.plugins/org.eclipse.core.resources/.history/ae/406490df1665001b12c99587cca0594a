@@ -1,6 +1,0 @@
-package com.madhu.springAssignment3;
-
-public interface StudentImplementation 
-{
-	public StudentA createNewStudent();
-}
