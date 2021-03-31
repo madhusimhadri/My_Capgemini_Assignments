@@ -4,39 +4,28 @@ html,body{
   height: 100;
   width: 100;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color:black;
+  color: #222;
 }
 
+.navbar-brand
+{
+  padding: 0;
+}
 .navbar
 {
  /* 16px=1 rem*/
-  padding: .6rem;
-<<<<<<< HEAD
-  background-color:rgb(117, 23, 28);
-=======
-  background-color:mediumaquamarine;
-  
->>>>>>> 83e50515a780484213a1c3cd2c6b2396f30aa6f7
-  
+  padding: .8rem;
 }
 
 .navbar-nav li{
-  padding-right: 35px;
+  padding-right: 20px;
 }
 
 .nav-link
 {
   font-size: 1.1em !important;
-<<<<<<< HEAD
 }
 
-=======
-  color: #000;
-  font-weight: bolder;
-}
-
-
->>>>>>> 83e50515a780484213a1c3cd2c6b2396f30aa6f7
 .carousel-inner img
 {
 width: 100%;
@@ -75,7 +64,7 @@ height: 100%;
 }
 
 .jumbotron{
-  padding: .8rem;
+  padding: 1rem;
   border-radius: 0;
 }
 
@@ -99,7 +88,37 @@ height: 100%;
   margin-bottom: 1rem;
 }
 
+.fa-code
+{
+  color: #e54d26;
+}
 
+.fa-css3
+{
+  color: #2163af;
+}
+
+.fa-bold
+{
+  color: #563d7c;
+}
+
+.fa-code,.fa-css3,.fa-bold
+{
+  font-size: 4rem;
+  margin: 1rem;
+}
+
+.fun
+{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.gif
+{
+ max-width: 100%;
+}
 
 .social a{
   font-size :4.5em;
@@ -315,6 +334,7 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
+
 
 
 

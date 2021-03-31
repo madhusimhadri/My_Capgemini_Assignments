@@ -11,12 +11,7 @@ html,body{
 {
  /* 16px=1 rem*/
   padding: .6rem;
-<<<<<<< HEAD
   background-color:rgb(117, 23, 28);
-=======
-  background-color:mediumaquamarine;
-  
->>>>>>> 83e50515a780484213a1c3cd2c6b2396f30aa6f7
   
 }
 
@@ -27,16 +22,8 @@ html,body{
 .nav-link
 {
   font-size: 1.1em !important;
-<<<<<<< HEAD
 }
 
-=======
-  color: #000;
-  font-weight: bolder;
-}
-
-
->>>>>>> 83e50515a780484213a1c3cd2c6b2396f30aa6f7
 .carousel-inner img
 {
 width: 100%;
