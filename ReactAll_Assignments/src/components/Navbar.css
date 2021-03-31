@@ -1,0 +1,42 @@
+.navbar
+{
+    
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.navItem {
+    background-color: blueviolet;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .navItem2 {
+    background-color: blueviolet;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .navItem3 {
+    background-color: blueviolet;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .navItem4 {
+    background-color: blueviolet;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+
+
+
